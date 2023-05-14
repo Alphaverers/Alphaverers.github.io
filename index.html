@@ -1,5 +1,4 @@
 <div class="scene">
-  <p>coming soon, for now, enjoy this grass block</p>
   <div class="cube">
     <div class="cube__face cube__face--left"></div>
     <div class="cube__face cube__face--right"></div>
@@ -9,12 +8,15 @@
     <div class="cube__face cube__face--back"></div>
   </div>
 </div>
+<div class="text">
+  <p>coming soon, for now, enjoy this grass block</p>
+</div>
 
 
 <style>
   html, body {
   height: 100%;
-  background: #FF0000;
+  background: #0000;
 }
 
 .scene {
@@ -32,6 +34,12 @@
    height: 200px;
    transform-style: preserve-3d;
    animation: rotation 10s infinite alternate;
+}
+
+.text {
+  position: absolute;
+  top: 320px;
+  left: 50px
 }
 
 @keyframes rotation {
