@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Steve's HTML Minecraft Template</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Refresh" content="5;url=minecraft:">
+</head>
+<body>
+<h1 id="loading-title">Loading Terrain <span id="loading-dots">.</span></h1>
+<script>
+var dots = window.setInterval( function() {
+var wait = document.getElementById("loading-dots");
+if ( wait.innerHTML.length > 2 ) 
+wait.innerHTML = "";
+else 
+wait.innerHTML += ".";
+}, 1000);
+setTimeout(function(){
+window.location.href = '../';
+}, 10000);
+ </script>
+</body>
+</html>
