@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./main/css/style.css" />
+
 <div class="scene">
   <div class="cube">
     <div class="cube__face cube__face--left"></div>
@@ -10,76 +12,94 @@
 </div>
 <div class="text">
   <p>coming soon, for now, enjoy this grass block</p>
+  <p>if you want to see the unfinished website</p>
+  <p>click the button below</p>
+  <main class="button-wrapper"> <a href="index.html">
+    <div class="button"><span>take me to the shadow realm</span></div></a>
 </div>
-
 
 <style>
   html, body {
-  height: 100%;
-  background: #0000;
-}
-
-.scene {
-  width: 100%;
-  height: 100%;
-  perspective: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cube {
-   position: center;
-   width: 200px;
-   height: 200px;
-   transform-style: preserve-3d;
-   animation: rotation 10s infinite alternate;
-}
-
-.text {
-  position: absolute;
-  top: 320px;
-  left: 50px
-}
-
-@keyframes rotation {
-  0% { transform: rotateY(0deg) rotateX(0deg); }
-  100% { transform: rotateY(720deg) rotateX(60deg); }
-}
-
-.cube__face {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-}
-
-.cube__face--left {
-  background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
-  transform: translateX(-100px) rotateY(90deg);
-}
-
-.cube__face--right {
-  background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
-  transform: translateX(100px) rotateY(90deg);
-}
-
-.cube__face--bottom {
-  background-image: url('https://uploaddeimagens.com.br/images/000/955/231/full/bottom.jpg?1497835434');
-  transform: translateY(100px) rotateX(90deg);
-}
-
-.cube__face--top {
-  background-image: url('https://uploaddeimagens.com.br/images/000/955/233/thumb/top.jpg?1497835487');
-  transform: translateY(-100px) rotateX(90deg);
-}
-
-.cube__face--back {
-  background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
-  transform: translateZ(-100px);
-}
-
-.cube__face--front {
-  background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
-  transform: translateZ(100px);
-}
+    height: 100%;
+    background: #000;
+  }
+  
+  .scene {
+    width: 100%;
+    height: 100%;
+    perspective: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cube {
+     position: center;
+     width: 10%;
+     height: 10%;
+     transform-style: preserve-3d;
+     animation: rotation 10s infinite alternate;
+  }
+  
+  .text {
+    position: absolute;
+    top: 320px;
+    left: 10px
+  }
+  
+  @keyframes rotation {
+    0% { transform: rotateY(0deg) rotateX(0deg); }
+    100% { transform: rotateY(720deg) rotateX(60deg); }
+  }
+  
+  .cube__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .cube__face--left {
+    background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
+    transform: translateX(-100px) rotateY(90deg);
+  }
+  
+  .cube__face--right {
+    background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
+    transform: translateX(100px) rotateY(90deg);
+  }
+  
+  .cube__face--bottom {
+    background-image: url('https://uploaddeimagens.com.br/images/000/955/231/full/bottom.jpg?1497835434');
+    transform: translateY(100px) rotateX(90deg);
+  }
+  
+  .cube__face--top {
+    background-image: url('https://uploaddeimagens.com.br/images/000/955/233/thumb/top.jpg?1497835487');
+    transform: translateY(-100px) rotateX(90deg);
+  }
+  
+  .cube__face--back {
+    background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
+    transform: translateZ(-100px);
+  }
+  
+  .cube__face--front {
+    background-image: url('https://uploaddeimagens.com.br/images/000/955/232/full/side.jpg?1497835464');
+    transform: translateZ(100px);
+  }
 </style>
+<script>
+  function addRow(classnamey, innerhtmly) {
+    const div = document.createElement('div');
+  
+    div.className = classnamey;
+  
+    div.innerHTML = innerhtmly;
+  
+    document.getElementById('content').appendChild(div);
+  }
+  
+  function removeRow(input) {
+    document.getElementById('content').removeChild(input.parentNode);
+  }
+</script>
